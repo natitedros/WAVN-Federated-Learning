@@ -5,8 +5,11 @@ import os
 from pathlib import Path
 
 # Create output directory
-output_dir = "edge_with_centroid_results_v2"
-os.makedirs(output_dir, exist_ok=True)
+output1_dir = "edge_detection_results"
+output2_dir = "edge_detection_with_centroid_results"
+
+os.makedirs(output1_dir, exist_ok=True)
+os.makedirs(output2_dir, exist_ok=True)
 
 
 class CropLayer(object):
@@ -42,7 +45,7 @@ net = cv2.dnn.readNetFromCaffe(protoPath, modelPath)
 cv2.dnn_registerLayer("Crop", CropLayer)
 
 # Start loop here
-directory_path = Path('./edge_detection_dataset')
+directory_path = Path('../../homing dataset/images_v2')
 
 for file in directory_path.iterdir():
     # Load input image
@@ -65,7 +68,7 @@ for file in directory_path.iterdir():
     plt.imshow(hed, cmap='gray')
     # plt.title('HED Edge Detection')
     plt.axis('off')
-    plt.savefig(f"{output_dir}/{file.stem}_hed.png", bbox_inches='tight', dpi=150, pad_inches=0)
+    plt.savefig(f"{output1_dir}/{file.stem}_hed.png", bbox_inches='tight', dpi=150, pad_inches=0)
     plt.close()
     
     blur = cv2.GaussianBlur(hed, (3, 3), 0)
@@ -89,5 +92,6 @@ for file in directory_path.iterdir():
     plt.imshow(cv2.cvtColor(hed_color, cv2.COLOR_BGR2RGB))
     # plt.title('HED Edge Detection')
     plt.axis('off')
-    plt.savefig(f"{output_dir}/{file.stem}_hed_with_centroid.png", bbox_inches='tight', dpi=150, pad_inches=0)
+    plt.savefig(f"{output2_dir}/{file.stem}_hed_c.png", bbox_inches='tight', dpi=150, pad_inches=0)
     plt.close()
+    print(f"...finished with {file.stem}")
