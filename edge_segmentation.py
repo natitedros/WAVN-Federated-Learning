@@ -5,8 +5,8 @@ import os
 from pathlib import Path
 
 # Create output directory
-output1_dir = "edge_detection_results"
-output2_dir = "edge_detection_with_centroid_results"
+output1_dir = "edge_detection_results_1000_01192026"
+output2_dir = "edge_detection_with_centroid_results_01192026"
 
 os.makedirs(output1_dir, exist_ok=True)
 os.makedirs(output2_dir, exist_ok=True)
@@ -45,7 +45,7 @@ net = cv2.dnn.readNetFromCaffe(protoPath, modelPath)
 cv2.dnn_registerLayer("Crop", CropLayer)
 
 # Start loop here
-directory_path = Path('../../homing dataset/images_v2')
+directory_path = Path('../../homing dataset/gazebo_dataset_1000/gazebo_dataset_01172026/images')
 
 for file in directory_path.iterdir():
     # Load input image
