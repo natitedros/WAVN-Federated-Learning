@@ -1,4 +1,4 @@
-# 🛰️ Federated Visual Navigation System for GPS-Denied Environments
+# Wide Area Visual Navigation using Federated Siamese CNN model
 
 ## Overview
 This project implements a **visual navigation system** that enables **autonomous localization of robots** in **GPS-denied environments**. It combines **Federated Learning (FL)** with **Blockchain consensus mechanisms** to ensure secure, efficient, and reliable model training across distributed robotic nodes.
