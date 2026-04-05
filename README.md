@@ -39,7 +39,7 @@ A Siamese convolutional neural network trained under a federated learning framew
 
 ### GNN Model
 
-A graph neural network model developed as part of the comparative analysis. Details available in `03_Model_and_Data_Comparison/`.
+A graph neural network model developed as part of the comparative analysis. Details available [HERE](https://github.com/ilovural/GNN-Federated-Visual-Homing-for-Cooperative-Multi-Robot-Navigation-in-GPS-Denied-Environments) by [Ilayda Vural](https://github.com/ilovural).
 
 ---
 
@@ -57,12 +57,12 @@ Full plots (accuracy, F1, precision, recall) are available in [01_Federated_Siam
 
 ## Setup
 
-**Dependencies:** Python, Keras, TensorFlow, OpenCV
+**Dependencies:** Python, Keras, TensorFlow
 
 Install dependencies:
 
 ```bash
-pip install tensorflow keras opencv-python
+pip install tensorflow keras
 ```
 
 **Edge Detection:** The HED (Holistically-nested Edge Detection) pretrained model (`hed_model/hed_pretrained_bsds.caffemodel`) is required for edge-enhanced input generation. See [02_Dataset_Generation/](02_Dataset_Generation/) for preprocessing scripts.
