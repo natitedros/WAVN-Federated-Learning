@@ -1,6 +1,6 @@
 # Federated Learning for Wide-Area Visual Navigation
 
-> **Paper:** [Link to paper — to be added upon publication]
+> **Paper:** http://dx.doi.org/10.1117/12.3100158
 
 ## Overview
 
